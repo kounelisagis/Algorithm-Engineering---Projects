@@ -105,3 +105,29 @@ ugraph four_lvl_graph(const int k) {
 
 	return G;
 }
+
+
+ugraph book_graph(const int n) {
+
+	assert (n>0);
+
+	ugraph G;
+
+	// books base
+	node v1 = G.new_node();
+	node v2 = G.new_node();
+	G.new_edge(v1,v2);
+
+	for(int i=0;i<n;i++) {
+		// new page
+		node w1 = G.new_node();
+		node w2 = G.new_node();
+		G.new_edge(w1,w2);
+
+		// add it to the book's base
+		G.new_edge(v1,w1);
+		G.new_edge(v2,w2);
+	}
+
+	return G;
+}

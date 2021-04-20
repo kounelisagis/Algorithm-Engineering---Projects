@@ -59,17 +59,7 @@ bool my_bipar_checker(const ugraph& G, list<node>& V1, list<node>& V2) {
 		v = source(e);
 		u = target(e);
 		if(col[v] == col[u]) {
-			// check for different distances between v and u
-			if(dist[v]>dist[u]) {
-				e = pred[v];
-				v = v==source(e) ? target(e) : source(e);
-				V1.push_front(v);
-			} else if(dist[u]>dist[v]) {
-				e = pred[u];
-				u = u==source(e) ? target(e) : source(e);
-				V1.push_back(u);
-			}
-
+			// find the paths to the lowest common ancestor
 			while(v!=u) {
 				V1.push_front(v);
 				V1.push_back(u);

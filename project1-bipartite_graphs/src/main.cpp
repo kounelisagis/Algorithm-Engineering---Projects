@@ -78,16 +78,11 @@ void testbench(ugraph& G, const std::string& message, int ITERATIONS=1000) {
 	std::cout << "Real time spent: " << leda_timer << std::endl;
 	std::cout << "Amortized time spent: " << leda_timer/ITERATIONS << std::endl;
 	std::cout << "------------------------------" << std::endl;
-
-
-	// my_print_lists(G, V1, V2);
-	// my_print_lists(H, A, B);
 }
 
 
 int main() {
 
-	// my_print_graph(G);
 	long long int sizes1[] = {10000,40000,90000};
 	for(int i=0;i<3;i++) {
 		ugraph G = nested_sqrs(sizes1[i]);
@@ -104,6 +99,12 @@ int main() {
 	for(int i=0;i<3;i++) {
 		ugraph G = four_lvl_graph(sizes3[i]);
 		testbench(G, "Four Levels Graph of " + std::to_string(sizes3[i]) + " nodes per level");
+	}
+
+	long long int sizes4[] = {5000,10000,15000};
+	for(int i=0;i<3;i++) {
+		ugraph G = book_graph(sizes4[i]);
+		testbench(G, "Book Graph of " + std::to_string(sizes4[i]) + " pages");
 	}
 
 	return 0;

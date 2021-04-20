@@ -11,5 +11,6 @@ using namespace leda;
 ugraph nested_sqrs(const int);
 ugraph ring_graph(const int);
 ugraph four_lvl_graph(const int);
+ugraph book_graph(const int);
 
 #endif
