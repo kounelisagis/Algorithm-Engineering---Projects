@@ -1,6 +1,6 @@
-# Algorithm Engineering - Projects
+# Algorithm Engineering - Boost, LEDA (C++) Projects
 
-This is my university projects for Algorithm Engineering course - CEID
+Projects for Algorithm Engineering course, [CEID](https://www.ceid.upatras.gr/en) University of Patras.
 
 ## Project 1 - Bipartite Graphs
 
